@@ -1,0 +1,21 @@
+.item{
+    background-color: #16181A !important;
+}
+
+.imagecontainer{
+    margin-left: 25px;
+}
+
+.userImage{
+    border-radius: 49%;
+}
+
+.flexcontainer{
+    display: flex;
+    gap: 25px;
+    flex-direction: row;    
+}
+
+.textcontainer{
+    color:  #fff !important;
+}
