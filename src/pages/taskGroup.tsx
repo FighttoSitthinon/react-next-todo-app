@@ -1,12 +1,8 @@
-import Head from 'next/head'
-
 import TaskTable from './taskTable'
 import InputForm from './inputForm'
 import TaskModel from '../models/taskModel'
-import { useState } from 'react';
-
 export default function TaskGroup() {
-    const [taskActionId, setTaskActionId] = useState(undefined);
+    
 
     const taskList: TaskModel[] = [
         { id: 1, seq: 1, message: 'Hello World', color: '#fff', isImportant: false, isCompleted: true, timeStamp: new Date() },
