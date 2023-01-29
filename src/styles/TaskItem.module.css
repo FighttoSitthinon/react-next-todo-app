@@ -19,3 +19,49 @@
 .textcontainer{
     color:  #fff !important;
 }
+
+.textstrike{
+    text-decoration: line-through;
+}
+
+.checkcontainer{
+    width: 80px;
+    height: 80px;
+    border-radius: 49%;
+    background: linear-gradient(45deg, var(--nextui-colors-blue600) -20%, var(--nextui-colors-pink600) 40%, var(--nextui-colors-yellow600) 100%);
+    padding: 3px;
+}
+
+.displaycheck{
+    width:100%;
+    height:100%;
+    border-radius: 49%;
+    background-color: #16181A;
+    position: relative;
+}
+
+.displaycheck.checked{
+  
+}
+
+.displaycheck.checked::before{
+    content: '';
+    position: absolute;
+    width: 6px;
+    height: 23px;
+    background: linear-gradient(44deg, var(--nextui-colors-blue600) -20%, var(--nextui-colors-pink600) 40%, var(--nextui-colors-yellow600) 100%);
+    transform: translate(-50%, -50%) rotate(320deg);
+    left: 33%;
+    top: 62%
+}
+
+.displaycheck.checked::after{
+    content: '';
+    position: absolute;
+    width: 6px;
+    height: 45px;
+    background: linear-gradient(44deg, var(--nextui-colors-blue600) -20%, var(--nextui-colors-pink600) 40%, var(--nextui-colors-yellow600) 100%);
+    transform: translate(-50%, -50%) rotate(46deg);
+    left: 60%;
+    top: 52%;
+}

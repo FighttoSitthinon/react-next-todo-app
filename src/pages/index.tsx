@@ -2,8 +2,7 @@ import Head from 'next/head'
 import Image from 'next/image'
 import { Permanent_Marker } from '@next/font/google'
 import styles from '@/styles/Home.module.css'
-import TaskTable from './taskTable'
-import InputForm from './inputForm'
+import TaskGroup from './taskGroup'
 import { Text } from "@nextui-org/react";
 
 const permanentMarker = Permanent_Marker({
@@ -30,8 +29,7 @@ export default function Home() {
           }}
           weight="bold"
         >Create your todo list here !!</Text>
-        <InputForm></InputForm>
-        <TaskTable></TaskTable>
+        <TaskGroup></TaskGroup>
       </main>
     </>
   )
