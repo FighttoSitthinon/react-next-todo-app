@@ -4,6 +4,9 @@ import TaskModel from '../models/taskModel';
 import TaskItem from './taskItem';
 
 export default function TaskTable({ taskList }: { taskList: TaskModel[] }) {
+    taskList.sort(function (a, b) {
+        return b.seq - a.seq;
+    });
 
     return (
         <Container md>

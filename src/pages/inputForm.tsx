@@ -1,10 +1,8 @@
 import { Container, Textarea, Grid, useInput, Spacer, Button } from "@nextui-org/react";
 import styles from '@/styles/InputForm.module.css'
-import { useState } from 'react';
-import TaskModel from '../models/taskModel';
+import { SetStateAction, useState } from 'react';
 
-export default function InputForm() {
-    const [data, setData] = useState('');
+export default function InputForm({ setNewData }: { setNewData: React.Dispatch<SetStateAction<string>>}) {
 
     const {
         value: controlledValue,
@@ -18,11 +16,11 @@ export default function InputForm() {
         event.preventDefault()
 
         // Get data from the form.
-        const data = {
-            message: event.target.message.value,
-        }
+        const message =  event.target.message.value
 
-        console.log(data)
+        setNewData(message)
+
+        reset()
     }
     return (
         <Container md>
@@ -64,8 +62,6 @@ export default function InputForm() {
                     </Grid.Container>
                 </div>
             </form>
-
-
         </Container>
     );
 }
